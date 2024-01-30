@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.sidebar::-webkit-scrollbar{
+    width: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background-color: #FBBA72;
+}
+
+.sidebar::-webkit-scrollbar-track{
+    background-color: #8F250C;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+div .space{
+    height: 100px;
+}
+
+.sidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #8F250C;
+    overflow-y: scroll;
+    transition: all .5s ease;
+}
+
+.sidebar header{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #8F250C;
+    user-select: none;
+}
+
+.sidebar ul label{
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 15px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+ul li:hover label{
+    padding-left: 50px;
+    color: #FBBA72;
+}
+
+.welcome h1{
+    font-size: 70px;
+    font-weight: lighter;
+    color:#8F250C;
+}
+
+.welcome h3{
+    color: #8F250C;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.welcome hr{
+    background: #8F250C;
+    width: 100%;
+    border: none;
+    height: 5px;
+}
+
+#problem1:checked ~ .sidebar ul .problem1,
+#problem2:checked ~ .sidebar ul .problem2,
+#problem3:checked ~ .sidebar ul .problem3,
+#problem4:checked ~ .sidebar ul .problem4,
+#problem5:checked ~ .sidebar ul .problem5,
+#problem6:checked ~ .sidebar ul .problem6,
+#problem7:checked ~ .sidebar ul .problem7,
+#problem8:checked ~ .sidebar ul .problem8,
+#problem9:checked ~ .sidebar ul .problem9,
+#problem10:checked ~ .sidebar ul .problem10,
+#problem11:checked ~ .sidebar ul .problem11,
+#problem12:checked ~ .sidebar ul .problem12,
+#problem13:checked ~ .sidebar ul .problem13,
+#problem14:checked ~ .sidebar ul .problem14,
+#problem15:checked ~ .sidebar ul .problem15,
+#problem16:checked ~ .sidebar ul .problem16,
+#problem17:checked ~ .sidebar ul .problem17,
+#problem18:checked ~ .sidebar ul .problem18,
+#problem19:checked ~ .sidebar ul .problem19,
+#problem20:checked ~ .sidebar ul .problem20,
+#problem21:checked ~ .sidebar ul .problem21{
+    padding-left: 50px;
+    background: #551102;
+    color: #FBBA72;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; 
+    padding-top: 0; 
+    align-items: center;
+}
+
+.content h2{
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+section .innerBorder{
+    text-align: center;
+    position: relative;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid;
+    border-color: #8F250C;
+    overflow: auto;
+}
+
+.content .innerBorder .textLeft{
+    width: 100%;
+    font-size: 150%;
+    text-align: left;
+    overflow: auto;
+    resize: none;
+    border: none;
+}
+
+.content table td{
+    text-align: center;
+}
+
+section .content{
+    display: none;
+    position: absolute;
+    padding: 5px;
+    border: 5px solid;
+    border-color: #8F250C;
+}
+
+#home:checked ~ section .welcome,
+#problem1:checked ~ section .problem-1,
+#problem2:checked ~ section .problem-2,
+#problem3:checked ~ section .problem-3,
+#problem4:checked ~ section .problem-4,
+#problem5:checked ~ section .problem-5,
+#problem6:checked ~ section .problem-6,
+#problem7:checked ~ section .problem-7,
+#problem8:checked ~ section .problem-8,
+#problem9:checked ~ section .problem-9,
+#problem10:checked ~ section .problem-10,
+#problem11:checked ~ section .problem-11,
+#problem12:checked ~ section .problem-12,
+#problem13:checked ~ section .problem-13,
+#problem14:checked ~ section .problem-14,
+#problem15:checked ~ section .problem-15,
+#problem16:checked ~ section .problem-16,
+#problem17:checked ~ section .problem-17,
+#problem18:checked ~ section .problem-18,
+#problem19:checked ~ section .problem-19,
+#problem20:checked ~ section .problem-20,
+#problem21:checked ~ section .problem-21{
+    display: block;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #FBBA72;
+}
+
+.sidebar ul{
+    margin-right: 16px;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+
+#check:checked ~ section{
+    margin-left: 150px;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #8F250C;
+    border-radius: 3px;
+}
+
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: #FBBA72;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel{
+    z-index: 1000;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #FBBA72;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+.navbar{
+    display: flex;
+    background: #8F250C;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: end;
+}
+
+.navbar h3{
+    width: 300px;
+    color: #FBBA72;
+    margin-right: 40px;
+    font-size: 40px;
+}
+
+section{
+    height: 500px;
+    width: 100%;
+    transition: all .5s;
+}
+
+form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+input[type=number]{
+    width: 200px;
+    height: 50px;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 150%;
+}
+
+input[type=text]{
+    width: 200px;
+    height: 50px;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 150%;
+}
+
+input[type=submit]{
+    width: 130px;
+    height: 50px;
+    margin-right: 5px;
+    font-size: 150%;
+    color: white;
+    background-color: #8F250C;
+    
+}
+
+.unit{
+    text-align:left; 
+    font-size: 120%;
+    font-weight: bold;
+}
